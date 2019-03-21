@@ -1,4 +1,4 @@
-package br.com.candev.aajm.Model;
+package br.com.candev.aajm.model;
 
 import com.google.firebase.database.Exclude;
 

@@ -1,4 +1,4 @@
-package br.com.candev.aajm.Activity;
+package br.com.candev.aajm.activity;
 
 import android.os.Bundle;
 import android.view.View;
