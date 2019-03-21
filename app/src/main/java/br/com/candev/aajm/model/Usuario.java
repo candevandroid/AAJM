@@ -1,6 +1,9 @@
 package br.com.candev.aajm.model;
 
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+
+import br.com.candev.aajm.config.ConfiguracaoFirebase;
 
 public class Usuario {
 
@@ -10,6 +13,13 @@ public class Usuario {
     private String senha;
 
     public Usuario() {
+    }
+
+    public void salvar() {
+        DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
+        firebase.child("usuarios")
+                .child(this.idUsuario)
+                .setValue(this);
     }
 
     @Exclude
