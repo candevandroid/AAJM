@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 import br.com.candev.aajm.R;
 import br.com.candev.aajm.config.ConfiguracaoFirebase;
+import br.com.candev.aajm.helper.Base64Custom;
 import br.com.candev.aajm.model.Usuario;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -88,9 +89,9 @@ public class CadastroActivity extends AppCompatActivity {
 
                 if ( task.isSuccessful() ){
 
-                    /*String idUsuario = Base64Custom.codificarBase64( usuario.getEmail() );
+                    String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
                     usuario.setIdUsuario( idUsuario );
-                    usuario.salvar();*/
+                    //usuario.salvar();
                     finish();
 
                 }else {
