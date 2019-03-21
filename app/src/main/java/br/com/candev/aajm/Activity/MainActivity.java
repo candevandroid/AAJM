@@ -1,12 +1,12 @@
-package br.com.candev.aajm;
+package br.com.candev.aajm.Activity;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
+
+import br.com.candev.aajm.R;
 
 public class MainActivity extends IntroActivity {
 
@@ -14,6 +14,7 @@ public class MainActivity extends IntroActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setFullscreen(true);
         setButtonBackVisible(false);
         setButtonNextVisible(false);
 
@@ -40,6 +41,7 @@ public class MainActivity extends IntroActivity {
         addSlide( new FragmentSlide.Builder()
                 .background(android.R.color.white)
                 .fragment(R.layout.intro_cadastro)
+                .canGoForward(false)
                 .build());
     }
 
