@@ -103,8 +103,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void abrirTelaPrincipal(){
-        //startActivity(new Intent(this, PrincipalActivity.class));
-        Toast.makeText(this, "VC ESTA LOGADO", Toast.LENGTH_LONG).show();
+        startActivity(new Intent(this, PrincipalActivity.class));
         finish();
     }
 }
