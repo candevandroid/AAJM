@@ -48,6 +48,7 @@ public class MainActivity extends IntroActivity {
     private static final String TAG_FACEBOOK = "FacebookActivity";
     private GoogleSignInClient mGoogleSignInClient;
     private Usuario usuario;
+    private LoginButton loginButton;
 
     public static CallbackManager callbackManager;
 
@@ -70,7 +71,7 @@ public class MainActivity extends IntroActivity {
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = findViewById(R.id.login_button);
+        loginButton = findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays
                 .asList("public_profile, email"));
 
@@ -110,6 +111,10 @@ public class MainActivity extends IntroActivity {
 
     public void btSignInGoogle(View view) {
         signInGoogle();
+    }
+
+    public void btSigninFacebook(View view) {
+        loginButton.performClick();
     }
 
     private void signInGoogle() {
